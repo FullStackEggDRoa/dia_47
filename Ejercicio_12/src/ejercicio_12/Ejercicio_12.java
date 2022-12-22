@@ -17,6 +17,10 @@
  */
 package ejercicio_12;
 
+import ejercicio_12.Entidades.Persona;
+import ejercicio_12.Servicios.serviciosPersonas;
+import java.util.Scanner;
+
 /**
  *
  * @author droa
@@ -28,6 +32,28 @@ public class Ejercicio_12 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner leer = new Scanner(System.in).useDelimiter("\n");
+        serviciosPersonas sP = new serviciosPersonas();
+        Persona p1 = new Persona();
+        p1=sP.crearPersona(); // Daniel
+        System.out.println(p1.getNombre()+" tiene "+p1.calcularEdad()+" Años.");
+        
+        System.out.print("Ingrese la edad de otra Persona: ");
+        int edadOtraPersona = leer.nextInt();
+        System.out.print(p1.getNombre()+" tiene menor edad que la edad Ingresada?: ");
+        if(sP.menorQue(p1, edadOtraPersona)){
+            System.out.println("Si");
+        }else{
+            System.out.println("No");
+        }
+        if(p1.menorQue(35)){
+        
+        }
+        p1.mostrarPersona();
+        ///Test
+        
+        //System.out.println("Nombre: "+p1.getNombre());
+        //System.out.println("Fecha: "+p1.getFechaNacimiento());
     }
     
 }

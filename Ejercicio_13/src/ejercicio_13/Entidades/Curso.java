@@ -32,7 +32,7 @@ public class Curso {
         this.cantidadDiasPorSemana = cantidadDiasPorSemana;
         this.turno = turno;
         this.precioPorHora = precioPorHora;
-        this.alumnos = new String [5];
+        this.alumnos = alumnos;
     }
     
     // Métodos
